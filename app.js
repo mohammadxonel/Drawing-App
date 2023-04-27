@@ -21,3 +21,12 @@ let clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 })
+
+let saveBtn = document.querySelector(".save");
+saveBtn.addEventListener("click", () => {
+    let data = canvas.toDataURL("imag/png");
+    let a = document.createElement("a");
+    a.href = data;
+    a.download = "sketch.png";
+    a.click();
+})

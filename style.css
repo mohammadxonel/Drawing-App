@@ -25,3 +25,22 @@
     border: 3px solid rgb(214, 214, 214);
     transition: transform .5s;
 }
+
+.clr:hover{
+    transform: scale(1.2);
+}
+.clr:nth-child(1){
+    background-color: #000;
+}
+.clr:nth-child(2){
+    background-color: #EF626C;
+}
+.clr:nth-child(3){
+    background-color: #fdec03;
+}
+.clr:nth-child(4){
+    background-color: #24d102;
+}
+.clr:nth-child(5){
+    background-color: #fff;
+}

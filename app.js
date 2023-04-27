@@ -30,3 +30,24 @@ saveBtn.addEventListener("click", () => {
     a.download = "sketch.png";
     a.click();
 })
+
+window.addEventListener("mousedown", (e) => draw = true);
+window.addEventListener("mouseup", (e) => draw = false);
+
+window.addEventListener("mousemove", function(e){
+    if(prevX == null || prevY == null || !draw){
+        prevX = e.clientX;
+        prevY = e.clientY;
+        return;
+    }
+
+    let mouseX = e.clientX;
+    let mouseY = e.clientY;
+    ctx.beginPath();
+    ctx.moveTo(prevX, prevY);
+    ctx.lineTo(mouseX, mouseY);
+    ctx.stroke();
+
+    prevX = e.clientX;
+    prevY = e.clientY;
+})

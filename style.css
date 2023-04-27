@@ -16,3 +16,12 @@
     justify-content: space-around;
     transition: opacity .5s;
 }
+
+.clr{
+    height: 30px;
+    width: 30px;
+    background-color: blue;
+    border-radius: 50%;
+    border: 3px solid rgb(214, 214, 214);
+    transition: transform .5s;
+}

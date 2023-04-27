@@ -8,3 +8,11 @@ let prevX = null;
 let prevY = null;
 
 let draw = false;
+
+let clrs = document.querySelectorAll(".clr");
+clrs = Array.from(clrs);
+clrs.forEach(clr => {
+    clr.addEventListener("click", () => {
+        ctx.strokeStyle = clr.dataset.clr;
+    })
+})
